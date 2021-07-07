@@ -14,13 +14,16 @@ class Counter extends Component {
     }
 
   render() {
+    let classes = "btn-";
+    classes += this.state.count === 0 ? "warning" : "primary";
+
     return (
       <React.Fragment>
         <span>{"ITEM"}</span>
         <img src={this.state.imageUrl} alt="" />
         <br></br>
         <span style={this.styles}>{this.formatCount()}</span>
-        <Button className="">Increment</Button>
+        <Button style={{ fontSize: 15}} className={classes}>Increment</Button>
       </React.Fragment>
     );
   }
