@@ -14,6 +14,7 @@ class Counter extends Component {
       fontWeight: 'bold'
     }
 
+    
   render() {
 
     return (
