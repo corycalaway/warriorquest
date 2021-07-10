@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 class Backpack extends Component {
   state = {
-    items: ["Potato", "Iron", "Shirt"]
+    items: []
   };
 
   renderItems() {
