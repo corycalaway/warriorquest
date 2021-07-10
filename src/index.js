@@ -11,6 +11,7 @@ import Backpack from './components/backpack';
 ReactDOM.render(
   <React.StrictMode>
     <Counter />
+   
     <Backpack />
   </React.StrictMode>,
   document.getElementById('root')

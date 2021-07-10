@@ -3,11 +3,11 @@ import React, { Component } from "react";
 
 class Backpack extends Component {
   state = {
-    items: []
+    items: ["Potato", "Iron", "Shirt"]
   };
 
   renderItems() {
-    if (this.state.items.length === 0) return <p>You have no items!</p>;
+    if (this.state.items.length === 0) return <p>You have no items in your backpack!</p>;
 
     return (
       <ul>
@@ -21,8 +21,10 @@ class Backpack extends Component {
   render() {
     return (
         <div>
+            { this.state.items.length >0 && <h1>Your backpack weighs {this.state.items.length} pounds!</h1>}
             { this.renderItems()}
         </div>
+
     )
   }
 }
