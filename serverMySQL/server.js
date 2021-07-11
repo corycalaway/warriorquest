@@ -2,6 +2,8 @@ const express = require('express');
 // Import and require mysql2
 const mysql = require('mysql2');
 
+require('dotenv').config();
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -16,7 +18,7 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // {TODO: Add your MySQL password}
-    password: 'ccPOKEMONCC??',
+    password: process.env.SERVER_PASSWORD,
     database: 'warriorquest_db'
   },
   console.log(`Connected to the warriorquest_db database.`)
