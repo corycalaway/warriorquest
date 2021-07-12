@@ -9,7 +9,7 @@ class DB {
     getAllUsers() {
      
         return this.connection.promise().query(
-            "SELECT * FROM savedusers;"
+            "SELECT * FROM savedusers LEFT JOIN basicpower on savedusers.basicpower_id LEFT JOIN specialpower on savedusers.specialpower_id;"
         );
     }
 }
