@@ -12,13 +12,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Connect to database
-const db = mysql.createConnection(
+const connection = mysql.createConnection(
   {
     host: 'localhost',
     // MySQL username,
     user: 'root',
     // {TODO: Add your MySQL password}
-    password: process.env.SERVER_PASSWORD,
+    password: 'ccPOKEMONCC??',
     database: 'warriorquest_db'
   },
   console.log(`Connected to the warriorquest_db database.`)
@@ -35,11 +35,13 @@ const db = mysql.createConnection(
 // });
 
 // Query database
-db.query('SELECT * FROM user', function (err, results) {
-  console.log(results);
-});
+// db.query('SELECT * FROM user', function (err, results) {
+//   console.log(results);
+// });
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
   res.status(404).end();
 });
+
+module.exports = connection
