@@ -1,11 +1,12 @@
 // Dependencies
 const Sequelize = require('sequelize');
+require('dotenv').config()
 
 // Creates mySQL connection using Sequelize
 // Include your MySQL user/password information
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
-  : new Sequelize('sequelize_library', 'root', 'ccPOKEMONCC??', {
+  : new Sequelize('sequelize_library', 'root', process.env.DB_SERVER_PASSWORD, {
       host: 'localhost',
       port: 3306,
       dialect: 'mysql',
