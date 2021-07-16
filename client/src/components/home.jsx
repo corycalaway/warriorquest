@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
         <div>
-            <h1>Welcome to Warrior Quest!</h1>
+            <h1 className="text-red-500">Welcome to Warrior Quest!</h1>
             <nav>
                 <ul>
                     <li>
