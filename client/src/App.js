@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Counter from "./components/counter";
 import Backpack from './components/backpack';
 import Home from './components/home';
+import "tailwindcss/tailwind.css"
 
 const client = new ApolloClient({
   request: (operation) => {
