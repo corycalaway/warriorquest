@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 
-.title-theme {
-    color: blue;
+.center-text {
+    text-align: center;
+}
+
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 @layer base {
-  h1 {
-    @apply title-theme;
+  .titleClass {
+    @apply rainbow-text;
+    @apply center-text;
+
   }
 }
