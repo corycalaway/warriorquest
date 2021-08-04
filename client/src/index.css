@@ -17,6 +17,9 @@
   .titleClass {
     @apply rainbow-text;
     @apply center-text;
+  }
 
+  .rainbowtext {
+    @apply rainbow-text;
   }
 }
